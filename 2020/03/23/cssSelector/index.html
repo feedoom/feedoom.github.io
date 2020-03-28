@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <script>
+  var _hmt = _hmt || []
+  ;(function() {
+    var hm = document.createElement('script')
+    hm.src = 'https://hm.baidu.com/hm.js?5a0acc897fd96474a2c8f4deac84611a'
+    var s = document.getElementsByTagName('script')[0]
+    s.parentNode.insertBefore(hm, s)
+  })()
+</script> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    
+    <title>
+      css选择器 - feedoom Blog
+    </title>
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    
+<link rel="stylesheet" href="/style/style.css">
+
+  <meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="feedoom Blog" type="application/atom+xml">
+</head>
+  <body>
+    <canvas id='pagemap'></canvas>
+    
+    <div id="post-toc" class="animated hiddenToc hide">
+      <span class="title">Toc</span>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#根据元素类型、名称"><span class="toc-text">根据元素类型、名称</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#元素组"><span class="toc-text">元素组</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#根据元素的类或ID"><span class="toc-text">根据元素的类或ID</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#按类选择元素"><span class="toc-text">按类选择元素 .</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#按ID选择元素"><span class="toc-text">按ID选择元素:</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#根据上下文"><span class="toc-text">根据上下文</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#后代选择器-空格"><span class="toc-text">后代选择器: 空格</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#同胞元素"><span class="toc-text">同胞元素: ~</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相邻同胞元素"><span class="toc-text">相邻同胞元素: +</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#子代元素-gt"><span class="toc-text">子代元素: &gt;</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#根据元素的属性和值"><span class="toc-text">根据元素的属性和值</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#属性：-attr"><span class="toc-text">属性：[attr]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#属性和值：-attr-”value”"><span class="toc-text">属性和值：[attr&#x3D;”value”]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他"><span class="toc-text">其他</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#伪类和伪元素"><span class="toc-text">伪类和伪元素</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#a元素的伪类"><span class="toc-text">a元素的伪类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#根据伪类选择第一个或最后一个元素"><span class="toc-text">根据伪类选择第一个或最后一个元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#根据伪元素选择第一个字母或第一行"><span class="toc-text">根据伪元素选择第一个字母或第一行</span></a></li></ol></li></ol>
+    </div>
+    
+    <div id="fixed-menu-wrap">
+      <span class="iconfont icon-sousuo search-box menu-reset"></span>
+      <span class="icon-toc menu-reset">Toc</span>
+      <span class="iconfont icon-arrowup menu-reset"></span>
+    </div>
+    <div id="fixed-menu">
+      <span class="iconfont icon-menu-"></span>
+    </div>
+    <div id="progress">
+      <div class="line"></div>
+    </div>
+    <div id="search-shade" class="animated hiddenSearch hide">
+      <div class="input-wrap">
+        <span class="iconfont icon-sousuo search-box"></span>
+        <input type="text" placeholder="Search" />
+        <span class="iconfont icon-close"></span>
+      </div>
+      <div class="search-result">
+        <div class="meta">
+          <span><b id="result-count">0</b> results found</span>
+          <img src="/images/logo.jpeg" />
+        </div>
+        <ul id="result-box"></ul>
+      </div>
+    </div>
+    <div id="menu-mask" class="animated hideMenuMask hide">
+      <span class="iconfont icon-close"></span>
+      <div class="nav">
+        
+        <a href="/" class="">
+          首页
+        </a>
+        
+        <a href="/archives" class="">
+          归档
+        </a>
+        
+        <a href="/categories" class="">
+          分类
+        </a>
+        
+        <a href="/tags" class="">
+          标签
+        </a>
+        
+        <a href="/friends" class="">
+          友链
+        </a>
+        
+        <a href="/about" class="">
+          关于
+        </a>
+        
+      </div>
+    </div>
+    <div id="header">
+      <div class="intro">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <div class="author">feedoom</div>
+      </div>
+      <div class="nav">
+        <span class="iconfont icon-menu menu-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+    </div>
+    <div id="side" class="animated bounceInLeft">
+      <div class="shrink">
+        <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        <span class="iconfont icon-menu toggle-icon"></span>
+        <a href="#" class="search-box">
+          <span class="iconfont icon-sousuo"></span>
+        </a>
+      </div>
+      <div class="magnify">
+        <div class="about">
+          <div class="author">feedoom</div>
+          <a href="/" class="logo" style="background-image: url('/images/logo.jpeg')"></a>
+        </div>
+
+        <div class="nav">
+          
+          <a href="/" class="">
+            首页
+          </a>
+          
+          <a href="/archives" class="">
+            归档
+          </a>
+          
+          <a href="/categories" class="">
+            分类
+          </a>
+          
+          <a href="/tags" class="">
+            标签
+          </a>
+          
+          <a href="/friends" class="">
+            友链
+          </a>
+          
+          <a href="/about" class="">
+            关于
+          </a>
+          
+          <a href="#" class="search-box">
+            <span class="iconfont icon-sousuo"></span>
+          </a>
+        </div>
+        <div class="bottom">
+          <div class="follow">
+            
+            <a href="" target="_block">
+              <span class="iconfont icon-github"></span>
+            </a>
+            
+            <a href="" target="_block">
+              <span class="iconfont icon-facebook"></span>
+            </a>
+            
+            <a href="" target="_block">
+              <span class="iconfont icon-instagram"></span>
+            </a>
+             
+            <a href="/atom.xml" target="_block">
+              <span class="iconfont icon-rss"></span>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="main animated bounceInRight delay-0.7s">
+        <article class="post-entry">
+    <div class="header">
+      
+      <div class="title">css选择器</div>
+      <div class="meta">
+        <span class="item">
+          <span class="iconfont icon-time-circle"></span>
+          <span>2020/03/23</span>
+        </span>
+
+        
+          <span class="item leancloud-visitors" id="/2020/03/23/cssSelector/" data-flag-title="css选择器">
+            <span class="iconfont icon-eye1"></span>
+            <span class="leancloud-visitors-count"></span>
+          </span>
+        
+
+         
+        <span class="item">
+          <span class="iconfont icon-folder"></span>
+          <span>
+              
+                
+                  <a href="/categories/前端">前端</a>
+                
+              
+          </span>
+        </span>
+        
+        
+         
+          <span class="item">
+            <span class="iconfont icon-tag1"></span>
+            <span>
+                
+                  
+                    <a href="/tags/css">css</a>
+                  
+                
+            </span>
+          </span>
+         
+      </div>
+      <div>
+      </div>
+    </div>
+    <html><head></head><body><h1 id="简介">简介<a class="post-anchor" href="#简介"></a></h1><p>css 根据选择器决定样式规则应用于哪些元素</p>
+<p>选择器大概可根据以下标准来选择所要格式化的元素:</p>
+<p>1.元素的类型或名称</p>
+<p>2.元素的类或ID</p>
+<p>3.元素所在的上下文</p>
+<p>4.元素的属性和值</p>
+<p>5.元素的伪类或伪元素</p>
+<h1 id="根据元素类型、名称">根据元素类型、名称<a class="post-anchor" href="#根据元素类型、名称"></a></h1><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h1</span> {<br>    <span class="hljs-attribute">color</span>: red; <br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>这个样式应用于<code>h1</code> 元素,使其颜色为红色.</p>
+<h2 id="元素组">元素组<a class="post-anchor" href="#元素组"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h1</span>,<br><span class="hljs-selector-tag">h2</span> {<br>    <span class="hljs-attribute">color</span>: red;<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>选择h1和h2元素，使其颜色为红色。</p>
+<h1 id="根据元素的类或ID">根据元素的类或ID<a class="post-anchor" href="#根据元素的类或ID"></a></h1><h2 id="按类选择元素">按类选择元素 <strong>.</strong><a class="post-anchor" href="#按类选择元素"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.phone</span> {<br>    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#FF0000</span><br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>这个选择器会选择<code>class</code> 为<code>phone</code> 的元素,使其拥有一个红色的边框.</p>
+<h2 id="按ID选择元素">按ID选择元素:<a class="post-anchor" href="#按ID选择元素"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-id">#iphonex</span> {<br>    <span class="hljs-attribute">color</span>: white;<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>选中ID为<code>iphonex</code> 的元素,使其颜色为白色.</p>
+<h1 id="根据上下文">根据上下文<a class="post-anchor" href="#根据上下文"></a></h1><h2 id="后代选择器-空格">后代选择器: 空格<a class="post-anchor" href="#后代选择器-空格"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.phone</span> <span class="hljs-selector-class">.iphone</span> {<br>    <span class="hljs-attribute">background-color</span>: red;<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>选择祖先为<code>phone</code> 类的<code>iphone</code> 类元素</p>
+<blockquote>
+<p>注意：不管为第几代,只要祖先是<code>phone</code> 类的<code>iphone</code> 类元素都会被选中。</p>
+</blockquote>
+<h2 id="同胞元素">同胞元素: ~<a class="post-anchor" href="#同胞元素"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">h1</span> ~ <span class="hljs-selector-tag">h2</span> {<br>    <span class="hljs-attribute">color</span>: red;<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>选择同一父元素下h1的同胞元素h2,不相邻也会选到</p>
+<h2 id="相邻同胞元素">相邻同胞元素: +<a class="post-anchor" href="#相邻同胞元素"></a></h2><figure class="highlight html"><table><tbody><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"phone"</span>></span><br>    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"xiaomi"</span>></span><br>    ...<br>    <span class="hljs-tag"></<span class="hljs-name">div</span>></span><br><br>    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pixel"</span>></span><br>    ...<br>    <span class="hljs-tag"></<span class="hljs-name">div</span>></span><br>    <br>    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"iphone"</span>></span><br>    ...<br>    <span class="hljs-tag"></<span class="hljs-name">div</span>></span><br><br>    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pixel"</span>></span><br>    ...<br>    <span class="hljs-tag"></<span class="hljs-name">div</span>></span><br><span class="hljs-tag"></<span class="hljs-name">div</span>></span><br></code></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.phone</span> <span class="hljs-selector-class">.iphone</span>+<span class="hljs-selector-tag">pixel</span> {<br>    <span class="hljs-attribute">backgroud-color</span>: blue;<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>选择<code>iphone</code> 类的之后的相邻<code>pixel</code> 类元素，其中<code>iphone</code> 类元素和<code>pixel</code> 类元素都是<code>phone</code> 类的子元素。</p>
+<blockquote>
+<p>注意：只会选择和<code>.iphone</code> 相邻的<code>.pixel</code> 元素，并且只会选择<code>.iphone</code> 之后的元素，不会选择<code>.iphone</code> 之前的元素。</p>
+</blockquote>
+<h2 id="子代元素-gt">子代元素: ><a class="post-anchor" href="#子代元素-gt"></a></h2><figure class="highlight html"><table><tbody><tr><td class="code"><pre><code class="hljs html"><span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"phone"</span>></span><br>    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"pixel"</span>></span><br>    ...<br>    <span class="hljs-tag"></<span class="hljs-name">div</span>></span><br>    <br>    <span class="hljs-tag"><<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"iphone"</span>></span><br>        <span class="hljs-tag"><<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"iphone"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span>></span><br>    <span class="hljs-tag"></<span class="hljs-name">div</span>></span><br><span class="hljs-tag"></<span class="hljs-name">div</span>></span><br></code></pre></td></tr></tbody></table></figure>
+
+<figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.phone</span> > <span class="hljs-selector-tag">iphone</span> {<br>    <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid red;<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>选择<code>phone</code> 类元素的子元素<code>iphone</code> 类元素。</p>
+<blockquote>
+<p>注意：只会选择<code>phone</code> 类元素的子元素，不会选择其子子元素、子子子元素…</p>
+</blockquote>
+<h1 id="根据元素的属性和值">根据元素的属性和值<a class="post-anchor" href="#根据元素的属性和值"></a></h1><h2 id="属性：-attr">属性：[attr]<a class="post-anchor" href="#属性：-attr"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-attr">[href]</span> {<br>    ...<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>选择有<code>href</code> 属性的a元素</p>
+<h2 id="属性和值：-attr-”value”">属性和值：[attr=”value”]<a class="post-anchor" href="#属性和值：-attr-”value”"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-attr">[href=<span class="hljs-string">"https://www.baidu.com"</span>]</span> {<br>    ...<br>}<br></code></pre></td></tr></tbody></table></figure>
+
+<p>选择地址指向百度的a元素</p>
+<h2 id="其他">其他<a class="post-anchor" href="#其他"></a></h2><table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>属性值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[href*=”baidu”]</td>
+<td>href含baidu的元素</td>
+</tr>
+<tr>
+<td>[src$=”.png”]</td>
+<td>scr含.png的元素</td>
+</tr>
+<tr>
+<td>[href^=”https://“]</td>
+<td>href的值开头为https://的元素</td>
+</tr>
+<tr>
+<td>[lang|=”es”]</td>
+<td>lang的值开头为es-的元素</td>
+</tr>
+<tr>
+<td>[class~=”phone”]</td>
+<td>class的值以空格分隔的多个单词，phone是其中的一个</td>
+</tr>
+</tbody></table>
+<h1 id="伪类和伪元素">伪类和伪元素<a class="post-anchor" href="#伪类和伪元素"></a></h1><h2 id="a元素的伪类">a元素的伪类<a class="post-anchor" href="#a元素的伪类"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:link</span> {<br>    <span class="hljs-attribute">color</span>: red;<br>}<br><span class="hljs-comment">/* 链接未被访问时的颜色 */</span><br><br><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:visited</span> {<br>    <span class="hljs-attribute">color</span>: blue;<br>}<br><span class="hljs-comment">/* 链接已访问过时的颜色 */</span><br><br><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:focus</span> {<br>    <span class="hljs-attribute">color</span>: purple;<br>}<br><span class="hljs-comment">/* 链接获得焦点时的颜色 */</span><br><br><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {<br>    <span class="hljs-attribute">color</span>: greed;<br>}<br><span class="hljs-comment">/* 鼠标停留在链接时的颜色 */</span><br><br><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:active</span> {<br>    <span class="hljs-attribute">color</span>: orange;<br>}<br><span class="hljs-comment">/* 激活链接时的颜色 */</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h2 id="根据伪类选择第一个或最后一个元素">根据伪类选择第一个或最后一个元素<a class="post-anchor" href="#根据伪类选择第一个或最后一个元素"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:first-child</span> {<br>    <span class="hljs-attribute">color</span>: red;<br>}<br><span class="hljs-comment">/* 选择第一个li元素 */</span><br><br><span class="hljs-selector-tag">li</span><span class="hljs-selector-pseudo">:last-child</span> {<br>    <span class="hljs-attribute">color</span>: blue;<br>}<br><span class="hljs-comment">/* 选择最后一个li元素 */</span><br></code></pre></td></tr></tbody></table></figure>
+
+<h2 id="根据伪元素选择第一个字母或第一行">根据伪元素选择第一个字母或第一行<a class="post-anchor" href="#根据伪元素选择第一个字母或第一行"></a></h2><figure class="highlight css"><table><tbody><tr><td class="code"><pre><code class="hljs css"><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::first-letter</span> {<br>    <span class="hljs-attribute">color</span>: red;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5em</span>;<br>}<br><span class="hljs-comment">/* 选择p元素的第一个字母 */</span><br><br><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">::first-line</span> {<br>    <span class="hljs-attribute">color</span>: blue;<br>}<br><span class="hljs-comment">/* 选择p元素的第一行 */</span><br></code></pre></td></tr></tbody></table></figure>
+
+<hr>
+<blockquote>
+<p>这是我自学css时做的笔记</p>
+</blockquote>
+</body></html>
+
+  
+    <div class="post-reward">
+    <div id="reward-button">打赏</div>
+      <div id="qr">
+        <div class="wrap">
+            
+            <div class="bg-wrap">
+              <a href="/images/zhifubao.png" target="_block" class="bg" style="background-image:url('/images/zhifubao.png')"></a>
+              支付宝
+            </div>
+            
+            
+            <div class="bg-wrap">
+                <a href="/images/weixin.png" target="_block" class="bg" style="background-image:url('/images/weixin.png')"></a>
+              微信
+            </div>
+            
+        </div>
+      </div>
+    </div>
+  
+  <div class="post-guide">
+    <div class="item left">
+        
+    </div>
+    <div class="item right">
+        
+    </div>
+  </div>
+
+  
+
+  <div class="post-copyright">
+    <div class="auth">
+      本文作者：<a href="http://feedoom.github.io">feedoom</a>
+    </div>
+    <div class="link">
+      永久链接：<a href="http://feedoom.github.io/2020/03/23/cssSelector/">http://feedoom.github.io/2020/03/23/cssSelector/</a>
+    </div>
+    <div class="declare">
+      版权声明：本文首发于<a href="http://feedoom.github.io">feedoom</a>的博客，转载请注明出处！
+    </div>
+  </div>
+
+  <div id="comment"></div>
+
+  
+  
+</article>
+        <footer>
+          <div class="copyright">
+            ©2020
+            <a href="http://feedoom.github.io">feedoom</a> Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> |
+            <a href="https://github.com/shixiaohu2206/hexo-theme-huhu" target="_blank" rel="noopener">hexo-theme-huhu</a>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  </body>
+  
+</html>
+<script type="text/javascript">
+                  window.HUHU_CONFIG = JSON.parse("{\"share\":[\"weibo\",\"weixin\",\"qqkongjian\",\"QQ\",\"douban\",\"facebook\",\"twitter\",\"google\"],\"valine\":{\"API_ID\":\"xS3vwljAcbcroc7k4AtWuFdR-gzGzoHsz\",\"API_KEY\":\"NJxxPJVS6HO17BeEQsN75ghb\"},\"service_worker\":{\"open\":false}}")
+                </script> <script type="text/javascript">window.addEventListener('load', function() {
+    
+    window.loadJs = function(d, m, a) {
+      var c = document.getElementsByTagName('head')[0] || document.head || document.documentElement
+      var b = document.createElement('script')
+      b.defer = true
+      b.setAttribute('type', 'text/javascript')
+      b.setAttribute('charset', 'UTF-8')
+      b.setAttribute('async', 'true')
+      b.setAttribute('src', d)
+      m && b.setAttribute('data-main', '/scripts/app-built')
+      if (typeof a === 'function') {
+        if (window.attachEvent) {
+          b.onreadystatechange = function() {
+            var e = b.readyState
+            if (e === 'loaded' || e === 'complete') {
+              b.onreadystatechange = null
+              a()
+            }
+          }
+        } else {
+          b.onload = a
+        }
+      }
+      c.appendChild(b)
+    }
+    window.loadJs && window.loadJs('https://cdn.bootcss.com/require.js/2.3.6/require.min.js', true, function() {require.config({"paths":{"util":"util","share":"share","search":"search","pagemap":"pagemap.min","registerSW":"registerSW","valine":"cdn/Valine.min","av":["https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min"],"pjax":["https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min"],"jquery":["https://cdn.bootcss.com/jquery/3.4.1/jquery.min"],"confirm":["https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min"],"fancybox":["https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min"],"chart":["https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.bundle.min"]},"map":{"*":{"css":"https://cdn.bootcss.com/require-css/0.1.10/css.min.js"}},"shim":{"fancybox":{"deps":["css!https://cdn.bootcss.com/fancybox/3.5.7/jquery.fancybox.min.css"]},"confirm":{"deps":["css!https://cdn.bootcss.com/jquery-confirm/3.3.4/jquery-confirm.min.css"]},"chart":{"deps":["css!https://cdn.bootcss.com/Chart.js/2.8.0-rc.1/Chart.min.css"]}},"waitSeconds":3})})
+  })</script> <script type="text/javascript">
+                  ;(function() {
+                    var bp = document.createElement('script')
+                    var curProtocol = window.location.protocol.split(':')[0]
+                    if (curProtocol === 'https') {
+                      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js'
+                    } else {
+                      bp.src = 'http://push.zhanzhang.baidu.com/push.js'
+                    }
+                    var s = document.getElementsByTagName('script')[0]
+                    s.parentNode.insertBefore(bp, s)
+                  })()
+                </script> 

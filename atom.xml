@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>feedoom Blog</title>
+  <icon>http://feedoom.github.io/icon.png</icon>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://feedoom.github.io/"/>
+  <updated>2020-03-28T17:38:24.008Z</updated>
+  <id>http://feedoom.github.io/</id>
+  
+  <author>
+    <name>feedoom</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>css选择器</title>
+    <link href="http://feedoom.github.io/2020/03/23/cssSelector/"/>
+    <id>http://feedoom.github.io/2020/03/23/cssSelector/</id>
+    <published>2020-03-22T19:14:13.000Z</published>
+    <updated>2020-03-28T17:38:24.008Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h1 id=&quot;简介&quot;&gt;简介&lt;a class=&quot;post-anchor&quot; href=&quot;#简介&quot;&gt;&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;css 根据选择器决定样式规则应用于哪些元素&lt;/p&gt;
+&lt;p&gt;选择器大概可根据以下标准来选择所要格式化的元素:&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="前端" scheme="http://feedoom.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="css" scheme="http://feedoom.github.io/tags/css/"/>
+    
+  </entry>
+  
+</feed>
